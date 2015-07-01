@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="es.tekniker.framework.ktek.Ktek_questionnaire" table="`ktek_questionnaire`" schema="ktek_questionnaire" lazy="false">
+		<id name="ktek_pk_idquestionnaire" column="`ktek_pk_idquestionnaire`" type="integer">
+			<generator class="assigned">
+			</generator>
+		</id>
+		<property name="idpathology" column="`idpathology`" type="string" length="50" not-null="false" lazy="false"/>
+		<property name="ktek_uk_codquestionnaire" column="`ktek_uk_codquestionnaire`" index="ktek_questionnaire_ktek_uk_codquestionnaire_key" type="string" length="25" not-null="true" lazy="false"/>
+		<property name="namequestionnaire" column="`namequestionnaire`" type="string" length="255" not-null="true" lazy="false"/>
+		<property name="desquestionnaire" column="`desquestionnaire`" type="string" length="255" not-null="false" lazy="false"/>
+		<property name="desinstructionsquestionnaire" column="`desinstructionsquestionnaire`" type="text" not-null="true" lazy="false"/>
+		<property name="desevaluation" column="`desevaluation`" type="text" not-null="false" lazy="false"/>
+		<property name="ismultisection" column="`ismultisection`" type="short" not-null="true" lazy="false"/>
+		<property name="typequestionnaire" column="`typequestionnaire`" type="short" not-null="true" lazy="false"/>
+		<property name="typesortorder" column="`typesortorder`" type="short" not-null="true" lazy="false">
+			<meta attribute="field-description">
+				
+		&#160;
+			</meta>
+		</property>
+		<property name="typequestionnaireflow" column="`typequestionnaireflow`" type="short" not-null="true" lazy="false"/>
+		<property name="datevalidfrom" column="`datevalidfrom`" type="long" not-null="true" lazy="false"/>
+		<property name="datevalidto" column="`datevalidto`" type="long" not-null="false" lazy="false"/>
+		<property name="datecreation" column="`datecreation`" type="long" not-null="true" lazy="false"/>
+		<property name="typemonitoringactivity" type="short" not-null="false" lazy="false">
+			<column name="`typemonitoringactivity`" default="0"/>
+		</property>
+		<property name="periodicityunit" column="`periodicityunit`" type="short" not-null="false" lazy="false"/>
+		<property name="periodictyvalue" column="`periodictyvalue`" type="short" not-null="false" lazy="false"/>
+		<property name="collectiontimefrom" column="`collectiontimefrom`" type="long" not-null="false" lazy="false"/>
+		<property name="collectiontimeto" column="`collectiontimeto`" type="long" not-null="false" lazy="false"/>
+		<property name="completionintervalunit" column="`completionintervalunit`" type="short" not-null="false" lazy="false"/>
+		<property name="completionintervalvalue" column="`completionintervalvalue`" type="short" not-null="false" lazy="false"/>
+		<property name="isdeleted" column="`isdeleted`" type="short" not-null="true" lazy="false"/>
+		<one-to-one name="ktek_formatquestionnaire" class="es.tekniker.framework.ktek.Ktek_formatquestionnaire" cascade="save-update,lock" property-ref="ktek_fk_questionnaire" lazy="false"/>
+		<set name="ktek_qsection_questionnaire" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="`ktek_fk_idquestionnaire`" not-null="true"/>
+			<one-to-many class="es.tekniker.framework.ktek.Ktek_qsection_questionnaire"/>
+		</set>
+		<set name="ktek_result_questionnaire" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="`ktek_fk_idquestionnaire`" not-null="false"/>
+			<one-to-many class="es.tekniker.framework.ktek.Ktek_result_questionnaire"/>
+		</set>
+		<set name="ktek_userquestionnaire_planning" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="`ktek_fk_idquestionnaire`" not-null="true"/>
+			<one-to-many class="es.tekniker.framework.ktek.Ktek_userquestionnaire_planning"/>
+		</set>
+	</class>
+</hibernate-mapping>

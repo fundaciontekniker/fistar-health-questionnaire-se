@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+       xmlns:cxf="http://cxf.apache.org/core"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://cxf.apache.org/jaxrs
+                           http://cxf.apache.org/schemas/jaxrs.xsd
+                           http://cxf.apache.org/core
+                           http://cxf.apache.org/schemas/core.xsd">
+
+    <!-- do not use import statements if CXFServlet init parameters link to this beans.xml 
+    http://fazlansabar.blogspot.com.es/2012/04/part-2-restful-ws-with-apache-cxf-json.html
+    -->
+
+    <import resource="classpath:META-INF/cxf/cxf.xml"/>
+    <import resource="classpath:META-INF/cxf/cxf-servlet.xml"/>
+
+
+	<!--Here we are adding jacksonJsonProvider for JSON parser-->
+	<bean id="jacksonJsonProvider" class="es.tekniker.framework.ktek.questionnaire.rest.CustomJsonProvider" />
+	
+    <jaxrs:server id="QuestionnaireServices" address="/rest/ktek/questionnaire/">
+        <jaxrs:serviceBeans>
+            <ref bean="questionnaireServicesBean"/>
+        </jaxrs:serviceBeans>
+        <jaxrs:extensionMappings>
+            <entry key="xml" value="application/xml" />
+            <entry key="json" value="application/json" />
+        </jaxrs:extensionMappings>
+        <jaxrs:features>
+            <cxf:logging/>
+        </jaxrs:features>
+        <jaxrs:providers>        
+        	<bean class="es.tekniker.framework.ktek.exception.ExceptionHandler"/>
+        	<ref bean="jacksonJsonProvider" />
+    	</jaxrs:providers>
+    </jaxrs:server>
+
+ 	<bean id="questionnaireServicesBean" class="es.tekniker.framework.ktek.questionnaire.rest.QuestionnaireMngWSImpl"/>
+   
+        
+    <jaxrs:server id="AuthorisationServices" address="/rest/ktek/questionnaire/authorisation">
+        <jaxrs:serviceBeans>
+            <ref bean="authorisationServicesBean"/>
+        </jaxrs:serviceBeans>
+        <jaxrs:extensionMappings>
+            <entry key="xml" value="application/xml" />
+            <entry key="json" value="application/json" />
+        </jaxrs:extensionMappings>
+        <jaxrs:features>
+            <cxf:logging/>
+        </jaxrs:features>
+        <jaxrs:providers>        
+        	<bean class="es.tekniker.framework.ktek.exception.ExceptionHandler"/>
+        	<ref bean="jacksonJsonProvider" />
+    	</jaxrs:providers>
+    </jaxrs:server>
+    
+    <bean id="authorisationServicesBean" class="es.tekniker.framework.ktek.questionnaire.rest.AuthorisationMngWSImpl"/>
+    
+    <jaxrs:server id="NotificationServices" address="/rest/ktek/questionnaire/notification">
+        <jaxrs:serviceBeans>
+            <ref bean="notificationServicesBean"/>
+        </jaxrs:serviceBeans>
+        <jaxrs:extensionMappings>
+            <entry key="xml" value="application/xml" />
+            <entry key="json" value="application/json" />
+        </jaxrs:extensionMappings>
+        <jaxrs:features>
+            <cxf:logging/>
+        </jaxrs:features>
+        <jaxrs:providers>        
+        	<bean class="es.tekniker.framework.ktek.exception.ExceptionHandler"/>
+        	<ref bean="jacksonJsonProvider" />
+    	</jaxrs:providers>
+    </jaxrs:server>
+    
+    <bean id="notificationServicesBean" class="es.tekniker.framework.ktek.questionnaire.rest.NotificationMngWSImpl"/>
+    
+    
+    <bean id="jacksonJsonProviderList" class="es.tekniker.framework.ktek.questionnaire.rest.CustomJsonProviderList" />
+    
+     <jaxrs:server id="MonitoringServices" address="/rest/ktek/monitoring/">
+        <jaxrs:serviceBeans>
+            <ref bean="monitoringServicesBean"/>
+        </jaxrs:serviceBeans>
+        <jaxrs:extensionMappings>
+            <entry key="xml" value="application/xml" />
+            <entry key="json" value="application/json" />
+        </jaxrs:extensionMappings>
+        <jaxrs:features>
+            <cxf:logging/>
+        </jaxrs:features>
+        <jaxrs:providers>        
+        	<bean class="es.tekniker.framework.ktek.exception.ExceptionHandler"/>
+        	<ref bean="jacksonJsonProviderList" />
+    	</jaxrs:providers>
+    </jaxrs:server>
+
+ 	<bean id="monitoringServicesBean" class="es.tekniker.framework.ktek.monitoring.rest.MonitoringMngWSImpl"/>
+   
+    
+     <jaxrs:server id="DrugTreatmentServices" address="/rest/ktek/drugtreatment/">
+        <jaxrs:serviceBeans>
+            <ref bean="drugtreatmentServicesBean"/>
+        </jaxrs:serviceBeans>
+        <jaxrs:extensionMappings>
+            <entry key="xml" value="application/xml" />
+            <entry key="json" value="application/json" />
+        </jaxrs:extensionMappings>
+        <jaxrs:features>
+            <cxf:logging/>
+        </jaxrs:features>
+        <jaxrs:providers>        
+        	<bean class="es.tekniker.framework.ktek.exception.ExceptionHandler"/>
+        	<ref bean="jacksonJsonProviderList" />
+    	</jaxrs:providers>
+    </jaxrs:server>
+
+ 	<bean id="drugtreatmentServicesBean" class="es.tekniker.framework.ktek.drugtreatment.rest.DrugTreatmentMngWSImpl"/>
+   
+    
+        
+</beans>

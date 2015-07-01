@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="es.tekniker.framework.ktek.Ktek_formatquestionnaire" table="`ktek_formatquestionnaire`" schema="ktek_questionnaire" lazy="false">
+		<id name="ktek_pk_idformatquestionnaire" column="`ktek_pk_idformatquestionnaire`" type="integer" unsaved-value="0">
+			<generator class="identity">
+			</generator>
+		</id>
+		<many-to-one name="ktek_fk_questionnaire" column="`ktek_fk_questionnaire`" class="es.tekniker.framework.ktek.Ktek_questionnaire" cascade="save-update,lock" unique="true" not-null="true" lazy="false">
+		</many-to-one>
+		<property name="formatpagination" column="`formatpagination`" type="short" not-null="true" lazy="false"/>
+		<property name="formatintegerparameter" column="`formatintegerparameter`" type="short" not-null="true" lazy="false"/>
+		<property name="formatdecimalparameter" column="`formatdecimalparameter`" type="short" not-null="true" lazy="false"/>
+		<property name="formatsetuniqueitem" column="`formatsetuniqueitem`" type="short" not-null="true" lazy="false"/>
+		<property name="formatsetmultitem" column="`formatsetmultitem`" type="short" not-null="true" lazy="false"/>
+	</class>
+</hibernate-mapping>

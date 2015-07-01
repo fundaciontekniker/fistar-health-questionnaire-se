@@ -1,0 +1,143 @@
+
+/* Extra small devices (phones, less than 768px)
+**********************************************************/        
+
+/*context*/
+
+.text-learning {
+    color: #7C9D0E !important;
+}
+
+/*panels*/
+
+.panel-heading.panel-heading-learning
+{
+    background-color: #7C9D0E !important;
+    color: #fff !important;
+}
+.panel-heading-learning span 
+{
+    color: #fff !important;
+}
+
+/*buttons*/
+
+.btn-default.btn-learning {
+    text-align: left !important;
+    white-space: normal !important;
+}
+.btn-learning:hover,
+.btn-learning:focus,
+.btn-learning:active,
+.btn-learning.active {
+    color: #fff !important;
+    background-color: #7C9D0E !important;
+}
+
+/*links*/
+
+a.list-group-item-document:hover,
+a.list-group-item-url:hover,
+a.list-group-item-document:focus,
+a.list-group-item-url:focus,
+a.list-group-item-document:active,
+a.list-group-item-url:active,
+a.list-group-item-document.active,
+a.list-group-item-url.active 
+{
+  color: #fff !important;
+  background-color: #7C9D0E !important;
+}
+
+/*sessions*/
+
+.learning-session-number 
+{
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    font-weight: 900;
+    color: #fff;
+    background-color: #585858;
+    margin-right: 12px;    
+}
+
+.learning-session-status
+{
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    font-weight: 900;
+    color: #585858;
+    /*background-color: #fff;*/
+    margin-right: 12px;  
+}
+
+/*queestionnaires*/
+
+.questionnaire.questionnaire-learning
+{
+    
+}
+.questionnaire-learning .panel-heading
+{
+    background-color: #7C9D0E !important;
+    color: #fff !important;
+}
+.questionnaire-learning .quesionnaire-trials span
+{
+    color: #fff !important;
+    font-size: 18px !important;    
+}
+.questionnaire-learning .questionnaire-section 
+{
+    color: #7C9D0E !important;
+    border-left: 1px #7C9D0E solid !important;
+}
+.questionnaire-learning .questionnaire-section-item
+{
+    
+}
+.questionnaire-learning .questionnaire-section-item h4
+{
+    color: #7C9D0E !important;
+}
+.questionnaire-learning .btn:hover,
+.questionnaire-learning .btn:focus,
+.questionnaire-learning .btn:active,
+.questionnaire-learning .btn.active
+{
+  color: #fff !important;
+  background-color: #7C9D0E !important;
+}
+
+/*exercises*/
+
+.exercise-learning
+{
+}
+.exercise-learning .exercise-section
+{
+    padding: 10px 20px;
+    color: #7C9D0E;
+    border-left: 1px #7C9D0E solid;        
+    background-color: #f9f9f9;    
+}
+
+/* Small devices (tablets, 768px and up) 
+**********************************************************/
+@media (min-width: 768px) 
+{ 
+}        
+
+/* Medium devices (desktops, 992px and up) 
+**********************************************************/
+@media (min-width: 992px) 
+{
+}
+
+/* Large devices (large desktops, 1200px and up) 
+**********************************************************/
+@media (min-width: 1200px) 
+{
+} 

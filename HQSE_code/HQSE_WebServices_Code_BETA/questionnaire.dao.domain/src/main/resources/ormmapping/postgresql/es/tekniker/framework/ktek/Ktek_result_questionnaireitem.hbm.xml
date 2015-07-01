@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="es.tekniker.framework.ktek.Ktek_result_questionnaireitem" table="`ktek_result_questionnaireitem`" schema="ktek_questionnaire" lazy="false">
+		<id name="ktek_pk_idresultquestionnaireitem" column="`ktek_pk_idresultquestionnaireitem`" type="integer" unsaved-value="0">
+			<generator class="sequence">
+				<param name="sequence">ktek_questionnaire.ktek_result_questionnaireitem_ktek_pk_idresultquestionnaire_seq</param>
+			</generator>
+		</id>
+		<many-to-one name="ktek_fk_idquestionnaireitem" cascade="lock" column="`ktek_fk_idquestionnaireitem`" class="es.tekniker.framework.ktek.Ktek_questionnaireitem" not-null="true" lazy="false">
+		</many-to-one>
+		<many-to-one name="ktek_fk_idresultquestionnairesection" cascade="lock" column="`ktek_fk_idresultquestionnairesection`" class="es.tekniker.framework.ktek.Ktek_result_questionnairesection" not-null="true" lazy="false">
+		</many-to-one>
+		<property name="typeresult" column="`typeresult`" type="short" not-null="true" lazy="false"/>
+		<property name="integervalue" column="`integervalue`" type="long" not-null="false" lazy="false"/>
+		<property name="decimalvalue" column="`decimalvalue`" type="float" not-null="false" lazy="false"/>
+		<property name="stringvalue" column="`stringvalue`" type="string" length="255" not-null="false" lazy="false"/>
+		<property name="textvalue" column="`textvalue`" type="text" not-null="false" lazy="false"/>
+		<property name="codanswer" column="`codanswer`" type="string" length="50" not-null="false" lazy="false"/>
+		<property name="scoreanswer" column="`scoreanswer`" type="short" not-null="false" lazy="false"/>
+	</class>
+</hibernate-mapping>

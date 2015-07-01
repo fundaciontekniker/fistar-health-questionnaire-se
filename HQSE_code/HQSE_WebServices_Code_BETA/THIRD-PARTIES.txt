@@ -1,0 +1,53 @@
+This file lists all the third party libraries that are needed for compilation and available as maven dependency.
+
+aopalliance Public Domain
+asmall BSD
+cglib-nodep ASF 2.0
+commons-codec  The Apache License Version 2.0
+commons-httpclient The Apache License Version 2.0
+commons-lang The Apache License Version 2.0
+commons-logging The Apache License Version 2.0
+cxf-core The Apache License Version 2.0
+cxf-rt-frontend-jaxrs The Apache License Version 2.0
+cxf-rt-rs-extension-providers The Apache License Version 2.0
+cxf-rt-rs-service-description The Apache License Version 2.0
+cxf-rt-transports-http The Apache License Version 2.0
+cxf-rt-transports-http-jetty The Apache License Version 2.0
+geronimo-servlet The Apache Software License 2.0
+jackson-core The Apache Software License 2.0
+jackson-jaxrs The Apache Software License, Version 2.0 / GNU Lesser General Public License (LGPL), Version 2.1
+jackson-mapper The Apache Software License, Version 2.0
+jackson-xc The Apache Software License, Version 2.0 / GNU Lesser General Public License (LGPL), Version 2.1
+javax.annotation CDDL + GPLv2 with classpath exception
+javax.ws.rs COMMON DEVELOPMENT AND DISTRIBUTION LICENSE (CDDL) Version 1.0
+jetty-continuation The Apache Software License - Version 2.0 / Eclipse Public License - Version 1.0
+jetty-http The Apache Software License - Version 2.0 / Eclipse Public License - Version 1.0
+jetty-io The Apache Software License - Version 2.0 / Eclipse Public License - Version 1.0
+jetty-security The Apache Software License - Version 2.0 / Eclipse Public License - Version 1.0
+jetty-server The Apache Software License - Version 2.0 / Eclipse Public License - Version 1.0
+jetty-util The Apache Software License - Version 2.0 / Eclipse Public License - Version 1.0
+jtds LGPL 
+junit Eclipse Public License - v 1.0
+log4j The Apache Software License, Version 2.0
+orm.jar The Apache License Version 2.0 
+postgresql.8.4-2701.jar BSD 
+slf4 MIT License
+spring-aop The Apache License Version 2.0
+spring-asm The Apache License Version 2.0
+spring-beans The Apache License Version 2.0
+spring-context The Apache License Version 2.0
+spring-core The Apache License Version 2.0
+spring-expression The Apache License Version 2.0
+spring-web The Apache License Version 2.0
+stax2-api BSD 
+woodstox-core-asl The Apache License Version 2.0
+xmlschema-core The Apache License Version 2.0
+
+
+
+
+
+
+
+
+

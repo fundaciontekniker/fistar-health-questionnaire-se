@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="es.tekniker.framework.ktek.Ktek_auditaccesslog" table="`ktek_auditaccesslog`" schema="ktek_commons" lazy="false">
+		<id name="ktek_pk_idauditaccesslog" column="`ktek_pk_idauditaccesslog`" type="integer" unsaved-value="0">
+			<generator class="identity">
+			</generator>
+		</id>
+		<many-to-one name="idaccessuser" cascade="lock" column="`idaccessuser`" class="es.tekniker.framework.ktek.Ktek_user" not-null="true" lazy="false">
+		</many-to-one>
+		<many-to-one name="idaccesseduser" cascade="lock" column="`idaccesseduser`" class="es.tekniker.framework.ktek.Ktek_user" not-null="true" lazy="false">
+		</many-to-one>
+		<property name="codtelecareprogram" column="`codtelecareprogram`" type="string" length="50" not-null="true" lazy="false"/>
+		<property name="typeaction" column="`typeaction`" type="short" not-null="true" lazy="false"/>
+		<property name="idaction" column="`idaction`" type="integer" not-null="false" lazy="false"/>
+		<property name="logitemcreation" column="`logitemcreation`" type="long" not-null="true" lazy="false"/>
+	</class>
+</hibernate-mapping>

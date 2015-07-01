@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="es.tekniker.framework.ktek.Ktek_question" table="`ktek_question`" schema="ktek_questionnaire" lazy="false">
+		<id name="ktek_fk_idquestionnaireitemId" column="`ktek_fk_idquestionnaireitem`" type="integer">
+			<generator class="foreign">
+				<param name="property">ktek_fk_idquestionnaireitem</param>
+			</generator>
+		</id>
+		<one-to-one name="ktek_fk_idquestionnaireitem" class="es.tekniker.framework.ktek.Ktek_questionnaireitem" cascade="all" constrained="true"/>
+		<property name="typeanswersortorder" column="`typeanswersortorder`" type="short" not-null="true" lazy="false"/>
+		<property name="typeanswer" column="`typeanswer`" type="short" not-null="true" lazy="false"/>
+		<property name="formatanswerunique" column="`formatanswerunique`" type="short" not-null="false" lazy="false"/>
+		<many-to-one name="ktek_fk_idanswerset" cascade="lock" column="`ktek_fk_idanswerset`" class="es.tekniker.framework.ktek.Ktek_answerset" not-null="false" lazy="false">
+		</many-to-one>
+		<property name="weightquestion" type="short" not-null="true" lazy="false">
+			<column name="`weightquestion`" default="1"/>
+		</property>
+		<set name="ktek_answer" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="`ktek_fk_idquestionnaireitem`" not-null="false"/>
+			<one-to-many class="es.tekniker.framework.ktek.Ktek_answer"/>
+		</set>
+	</class>
+</hibernate-mapping>

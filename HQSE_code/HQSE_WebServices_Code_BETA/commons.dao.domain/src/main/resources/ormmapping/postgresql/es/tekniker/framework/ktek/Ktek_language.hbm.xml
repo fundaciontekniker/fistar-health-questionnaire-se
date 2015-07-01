@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="es.tekniker.framework.ktek.Ktek_language" table="`ktek_language`" schema="ktek_commons" lazy="false">
+		<id name="ktek_pk_idlanguage" column="`ktek_pk_idlanguage`" type="integer" unsaved-value="0">
+			<generator class="sequence">
+				<param name="sequence">ktek_commons.ktek_language_ktek_pk_idlanguage_seq</param>
+			</generator>
+		</id>
+		<property name="ktek_uk_codlanguage" column="`ktek_uk_codlanguage`" index="ktek_language_ktek_uk_codlanguage_key" type="string" length="3" not-null="true" lazy="false"/>
+		<property name="deslanguage" column="`deslanguage`" type="string" length="15" not-null="false" lazy="false"/>
+		<property name="isdefault" column="`isdefault`" type="short" not-null="true" lazy="false"/>
+		<set name="ktek_tpsettings" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="`ktek_fk_idlanguage`" not-null="true"/>
+			<one-to-many class="es.tekniker.framework.ktek.Ktek_tpsettings"/>
+		</set>
+		<set name="ktek_translation_text" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="`ktek_fk_language`" not-null="true"/>
+			<one-to-many class="es.tekniker.framework.ktek.Ktek_translation_text"/>
+		</set>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="es.tekniker.framework.ktek.Ktek_unit_parameter" table="`ktek_unit_parameter`" schema="ktek_questionnaire" lazy="false">
+		<composite-id>
+			<key-property name="ktek_fk_idquestionnaireitem_ktek_fk_idquestionnaireitem" column="`ktek_fk_idquestionnaireitem`" type="integer"/>
+			<key-property name="ktek_fk_idunit_ktek_pk_idunit" column="`ktek_fk_idunit`" type="integer"/>
+		</composite-id>
+		<many-to-one name="ktek_fk_idquestionnaireitem" column="`ktek_fk_idquestionnaireitem`" class="es.tekniker.framework.ktek.Ktek_parameter" insert="false" update="false">
+		</many-to-one>
+		<many-to-one name="ktek_fk_idunit" column="`ktek_fk_idunit`" class="es.tekniker.framework.ktek.Ktek_unit" insert="false" update="false">
+		</many-to-one>
+		<property name="valueconversion" column="`valueconversion`" type="float" not-null="true" lazy="false"/>
+		<property name="isdefault" column="`isdefault`" type="short" not-null="true" lazy="false"/>
+	</class>
+</hibernate-mapping>

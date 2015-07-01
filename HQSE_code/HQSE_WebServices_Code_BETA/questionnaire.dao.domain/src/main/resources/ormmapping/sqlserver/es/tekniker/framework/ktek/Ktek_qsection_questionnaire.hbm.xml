@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="es.tekniker.framework.ktek.Ktek_qsection_questionnaire" table="`ktek_qsection_questionnaire`" schema="ktek_questionnaire" lazy="false">
+		<composite-id>
+			<key-property name="ktek_fk_idquestionnaire_ktek_pk_idquestionnaire" column="`ktek_fk_idquestionnaire`" type="integer"/>
+			<key-property name="ktek_fk_idquestionnairesection_ktek_pk_idquestionnairesection" column="`ktek_fk_idquestionnairesection`" type="integer"/>
+		</composite-id>
+		<many-to-one name="ktek_fk_idquestionnaire" column="`ktek_fk_idquestionnaire`" class="es.tekniker.framework.ktek.Ktek_questionnaire" insert="false" update="false">
+		</many-to-one>
+		<many-to-one name="ktek_fk_idquestionnairesection" column="`ktek_fk_idquestionnairesection`" class="es.tekniker.framework.ktek.Ktek_questionnairesection" insert="false" update="false">
+		</many-to-one>
+		<property name="sortorder" column="`sortorder`" type="short" not-null="true" lazy="false"/>
+	</class>
+</hibernate-mapping>

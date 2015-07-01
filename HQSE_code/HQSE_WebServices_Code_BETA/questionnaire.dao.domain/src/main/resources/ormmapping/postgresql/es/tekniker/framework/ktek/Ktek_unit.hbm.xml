@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="es.tekniker.framework.ktek.Ktek_unit" table="`ktek_unit`" schema="ktek_questionnaire" lazy="false">
+		<id name="ktek_pk_idunit" column="`ktek_pk_idunit`" type="integer">
+			<generator class="assigned">
+			</generator>
+		</id>
+		<property name="ktek_uk_codunit" column="`ktek_uk_codunit`" index="ktek_unit_ktek_uk_codunit_key" type="string" length="50" not-null="true" lazy="false"/>
+		<set name="ktek_unit_parameter" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="`ktek_fk_idunit`" not-null="true"/>
+			<one-to-many class="es.tekniker.framework.ktek.Ktek_unit_parameter"/>
+		</set>
+	</class>
+</hibernate-mapping>

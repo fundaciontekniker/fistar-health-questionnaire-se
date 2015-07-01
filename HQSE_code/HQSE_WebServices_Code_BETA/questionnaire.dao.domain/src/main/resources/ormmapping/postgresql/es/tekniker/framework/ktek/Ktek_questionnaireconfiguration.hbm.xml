@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="es.tekniker.framework.ktek.Ktek_questionnaireconfiguration" table="`ktek_questionnaireconfiguration`" schema="ktek_questionnaire" lazy="false">
+		<id name="ktek_pk_ktek_idquestionnaireconfiguration" column="`ktek_pk_ktek_idquestionnaireconfiguration`" type="integer">
+			<generator class="assigned">
+			</generator>
+		</id>
+		<property name="ktek_typesave" column="`ktek_typesave`" type="integer" not-null="true" lazy="false"/>
+		<property name="endpointserver" column="`endpointserver`" type="string" length="255" not-null="false" lazy="false"/>
+		<property name="eventserviceoauth2headertoken" column="`eventserviceoauth2headertoken`" type="string" length="255" not-null="false" lazy="false"/>
+		<property name="timeout" column="`timeout`" type="integer" not-null="false" lazy="false"/>
+		<property name="port" column="`port`" type="integer" not-null="false" lazy="false"/>
+	</class>
+</hibernate-mapping>

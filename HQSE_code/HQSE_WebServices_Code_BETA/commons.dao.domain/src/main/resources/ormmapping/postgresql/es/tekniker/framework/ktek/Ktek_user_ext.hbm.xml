@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="es.tekniker.framework.ktek.Ktek_user_ext" table="`ktek_user_ext`" schema="ktek_commons" lazy="false">
+		<id name="ktek_fk_iduserId" column="`ktek_fk_iduser`" type="integer">
+			<generator class="foreign">
+				<param name="property">ktek_fk_iduser</param>
+			</generator>
+		</id>
+		<one-to-one name="ktek_fk_iduser" class="es.tekniker.framework.ktek.Ktek_user" cascade="all" constrained="true"/>
+		<property name="ktek_uk_coduserid" column="`ktek_uk_coduserid`" index="ktek_user_ext_ktek_uk_coduserid_key" type="string" length="50" not-null="true" lazy="false"/>
+		<property name="email" column="`email`" type="string" length="50" not-null="false" lazy="false"/>
+		<property name="mobile" column="`mobile`" type="string" length="15" not-null="false" lazy="false"/>
+		<property name="keyuser" column="`keyuser`" type="string" length="30" not-null="false" lazy="false"/>
+		<property name="passworduser" column="`passworduser`" type="string" length="30" not-null="false" lazy="false"/>
+		<property name="name" column="`name`" type="string" length="50" not-null="false" lazy="false"/>
+		<property name="surname" column="`surname`" type="string" length="255" not-null="false" lazy="false"/>
+	</class>
+</hibernate-mapping>

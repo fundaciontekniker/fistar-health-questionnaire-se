@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+ "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+   	<!-- properties -->
+		<property name="dialect">org.hibernate.dialect.SQLServerDialect</property>
+		<property name="connection.driver_class">net.sourceforge.jtds.jdbc.Driver</property>
+		<property name="connection.url">jdbc:jtds:sqlserver://10.0.0.184:1433/pro_fistarprod</property>
+		<property name="connection.username">ktek</property>
+		<property name="connection.password">ktek</property>
+		<property name="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+		<property name="hibernate.c3p0.acquire_increment">1</property>
+		<property name="hibernate.c3p0.idle_test_period">0</property>
+		<property name="hibernate.c3p0.min_size">1</property>
+		<property name="hibernate.c3p0.max_size">15</property>
+		<property name="hibernate.c3p0.timeout">0</property>
+		<property name="mssql.nocount">false</property>
+		<property name="show_sql">false</property>
+		<property name="query.substitutions">true 1, false 0, yes 'Y', no 'N'</property>
+		<!-- mapping files -->
+		<mapping resource="ormmapping/sqlserver/es/tekniker/framework/ktek/Ktek_auditaccesslog.hbm.xml" />
+		<mapping resource="ormmapping/sqlserver/es/tekniker/framework/ktek/Ktek_language.hbm.xml" />
+		<mapping resource="ormmapping/sqlserver/es/tekniker/framework/ktek/Ktek_pathology.hbm.xml" />
+		<mapping resource="ormmapping/sqlserver/es/tekniker/framework/ktek/Ktek_tpsettings.hbm.xml" />
+		<mapping resource="ormmapping/sqlserver/es/tekniker/framework/ktek/Ktek_translation_text.hbm.xml" />
+		<mapping resource="ormmapping/sqlserver/es/tekniker/framework/ktek/Ktek_user.hbm.xml" />
+		<mapping resource="ormmapping/sqlserver/es/tekniker/framework/ktek/Ktek_user_ext.hbm.xml" />
+		<mapping resource="ormmapping/sqlserver/es/tekniker/framework/ktek/Ktek_usersessiondata.hbm.xml" />
+	</session-factory>
+</hibernate-configuration>

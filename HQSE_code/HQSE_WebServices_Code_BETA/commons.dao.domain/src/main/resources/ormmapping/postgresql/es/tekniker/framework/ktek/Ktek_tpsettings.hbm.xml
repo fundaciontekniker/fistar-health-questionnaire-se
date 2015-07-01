@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="es.tekniker.framework.ktek.Ktek_tpsettings" table="`ktek_tpsettings`" schema="ktek_commons" lazy="false">
+		<id name="ktek_fk_iduserId" column="`ktek_fk_iduser`" type="integer">
+			<generator class="foreign">
+				<param name="property">ktek_fk_iduser</param>
+			</generator>
+		</id>
+		<one-to-one name="ktek_fk_iduser" class="es.tekniker.framework.ktek.Ktek_user" cascade="all" constrained="true"/>
+		<many-to-one name="ktek_fk_idlanguage" cascade="lock" column="`ktek_fk_idlanguage`" class="es.tekniker.framework.ktek.Ktek_language" not-null="true" lazy="false">
+		</many-to-one>
+		<property name="typecomchannel" column="`typecomchannel`" type="short" not-null="true" lazy="false"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+ "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+   	<!-- properties -->
+		<property name="dialect">org.hibernate.dialect.SQLServerDialect</property>
+		<property name="connection.driver_class">net.sourceforge.jtds.jdbc.Driver</property>
+		<property name="connection.url">jdbc:jtds:sqlserver://10.0.0.184:1433/pro_fistarprod</property>
+		<property name="connection.username">ktek</property>
+		<property name="connection.password">ktek</property>
+		<property name="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+		<property name="hibernate.c3p0.acquire_increment">1</property>
+		<property name="hibernate.c3p0.idle_test_period">0</property>
+		<property name="hibernate.c3p0.min_size">1</property>
+		<property name="hibernate.c3p0.max_size">15</property>
+		<property name="hibernate.c3p0.timeout">0</property>
+		<property name="mssql.nocount">false</property>
+		<property name="show_sql">false</property>
+		<property name="query.substitutions">true 1, false 0, yes 'Y', no 'N'</property>
+		<!-- mapping files -->
+		<mapping resource="ormmapping/sqlserver/es/tekniker/framework/ktek/Ktek_answer.hbm.xml" />
+		<mapping resource="ormmapping/sqlserver/es/tekniker/framework/ktek/Ktek_answerset.hbm.xml" />
+		<mapping resource="ormmapping/sqlserver/es/tekniker/framework/ktek/Ktek_codification.hbm.xml" />
+		<mapping resource="ormmapping/sqlserver/es/tekniker/framework/ktek/Ktek_formatquestionnaire.hbm.xml" />
+		<mapping resource="ormmapping/sqlserver/es/tekniker/framework/ktek/Ktek_parameter.hbm.xml" />
+		<mapping resource="ormmapping/sqlserver/es/tekniker/framework/ktek/Ktek_qitem_section.hbm.xml" />
+		<mapping resource="ormmapping/sqlserver/es/tekniker/framework/ktek/Ktek_qsection_questionnaire.hbm.xml" />
+		<mapping resource="ormmapping/sqlserver/es/tekniker/framework/ktek/Ktek_question.hbm.xml" />
+		<mapping resource="ormmapping/sqlserver/es/tekniker/framework/ktek/Ktek_questionnaire.hbm.xml" />
+		<mapping resource="ormmapping/sqlserver/es/tekniker/framework/ktek/Ktek_questionnaireconfiguration.hbm.xml" />
+		<mapping resource="ormmapping/sqlserver/es/tekniker/framework/ktek/Ktek_questionnaireitem.hbm.xml" />
+		<mapping resource="ormmapping/sqlserver/es/tekniker/framework/ktek/Ktek_questionnaireitem_codification.hbm.xml" />
+		<mapping resource="ormmapping/sqlserver/es/tekniker/framework/ktek/Ktek_questionnairesection.hbm.xml" />
+		<mapping resource="ormmapping/sqlserver/es/tekniker/framework/ktek/Ktek_result_questionnaire.hbm.xml" />
+		<mapping resource="ormmapping/sqlserver/es/tekniker/framework/ktek/Ktek_result_questionnaireitem.hbm.xml" />
+		<mapping resource="ormmapping/sqlserver/es/tekniker/framework/ktek/Ktek_result_questionnairesection.hbm.xml" />
+		<mapping resource="ormmapping/sqlserver/es/tekniker/framework/ktek/Ktek_unit.hbm.xml" />
+		<mapping resource="ormmapping/sqlserver/es/tekniker/framework/ktek/Ktek_unit_parameter.hbm.xml" />
+		<mapping resource="ormmapping/sqlserver/es/tekniker/framework/ktek/Ktek_userquestionnaire_planning.hbm.xml" />
+	</session-factory>
+</hibernate-configuration>

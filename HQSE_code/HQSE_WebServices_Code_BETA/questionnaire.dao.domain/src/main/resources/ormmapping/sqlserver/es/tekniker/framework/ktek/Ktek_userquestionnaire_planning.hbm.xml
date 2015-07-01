@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="es.tekniker.framework.ktek.Ktek_userquestionnaire_planning" table="`ktek_userquestionnaire_planning`" schema="ktek_questionnaire" lazy="false">
+		<id name="ktek_pk_iduserquestionnaireplanning" column="`ktek_pk_iduserquestionnaireplanning`" type="integer" unsaved-value="0">
+			<generator class="identity">
+			</generator>
+		</id>
+		<many-to-one name="ktek_fk_idquestionnaire" cascade="lock" column="`ktek_fk_idquestionnaire`" class="es.tekniker.framework.ktek.Ktek_questionnaire" not-null="true" lazy="false">
+		</many-to-one>
+		<property name="coduser" column="`coduser`" type="string" length="50" not-null="true" lazy="false"/>
+		<property name="codtelecareprogram" column="`codtelecareprogram`" type="string" length="50" not-null="true" lazy="false"/>
+		<property name="plannedfrom" column="`plannedfrom`" type="long" not-null="true" lazy="false"/>
+		<property name="plannedto" column="`plannedto`" type="long" not-null="true" lazy="false"/>
+		<property name="statusquestionnaire" column="`statusquestionnaire`" type="short" not-null="true" lazy="false"/>
+		<one-to-one name="ktek_result_questionnaire" class="es.tekniker.framework.ktek.Ktek_result_questionnaire" cascade="save-update,lock" property-ref="ktek_fk_iduserquestionnaireplanning" lazy="false"/>
+	</class>
+</hibernate-mapping>

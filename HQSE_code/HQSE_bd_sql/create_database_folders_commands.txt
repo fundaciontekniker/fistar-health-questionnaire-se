@@ -1,0 +1,11 @@
+ sudo ls -l /opt/PostgreSQL/9.3/data/
+ sudo mkdir /opt/PostgreSQL/9.3/data/ktekdata
+ sudo mkdir /opt/PostgreSQL/9.3/data/ktekindexes
+ sudo ls -l /opt/PostgreSQL/9.3/data/
+ sudo chmod 777 /opt/PostgreSQL/9.3/data/ktekdata
+ sudo chmod 777 /opt/PostgreSQL/9.3/data/ktekindexes
+ sudo chown postgres /opt/PostgreSQL/9.3/data/ktekindexes
+ sudo chown postgres /opt/PostgreSQL/9.3/data/ktekdata
+ sudo chgrp postgres /opt/PostgreSQL/9.3/data/ktekdata
+ sudo chgrp postgres /opt/PostgreSQL/9.3/data/ktekindexes
+ sudo ls -l /opt/PostgreSQL/9.3/data/

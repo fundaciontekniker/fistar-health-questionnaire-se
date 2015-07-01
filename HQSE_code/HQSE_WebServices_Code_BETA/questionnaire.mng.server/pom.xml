@@ -1,0 +1,115 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+    
+    <groupId>es.tekniker.framework.ktek</groupId>
+  	<artifactId>questionnaire.mng.server</artifactId>
+  	<version>0.0.1-SNAPSHOT</version>
+  	<name>Questionnaire Management Server</name>
+  
+  <dependencies>
+       
+    <dependency>
+    	<groupId>es.tekniker.framework.ktek</groupId>
+    	<artifactId>questionnaire.dao.domain</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+    	<scope>compile</scope>
+    </dependency>
+         
+    <dependency>
+    	<groupId>es.tekniker.framework.ktek</groupId>
+    	<artifactId>questionnaire.mng.db</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+    	<scope>compile</scope>
+    </dependency>
+        
+     <dependency>
+    	<groupId>es.tekniker.framework.ktek</groupId>
+    	<artifactId>questionnaire.mng.bo</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+    	<scope>compile</scope>
+    </dependency>
+    
+    <dependency>
+    	<groupId>es.tekniker.framework.ktek</groupId>
+    	<artifactId>commons.mng.config</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+    	<scope>compile</scope>
+    </dependency>
+    
+    <dependency>
+    	<groupId>es.tekniker.framework.ktek</groupId>
+    	<artifactId>commons.mng.bo</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+    	<scope>compile</scope>
+    </dependency>
+    
+    <dependency>
+    	<groupId>es.tekniker.framework.ktek</groupId>
+    	<artifactId>commons.mng.server</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+    	<scope>compile</scope>
+    </dependency>
+    
+    <dependency>
+    	<groupId>es.tekniker.framework.ktek</groupId>
+    	<artifactId>questionnaire.mng.eventservice.client</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+    	<scope>compile</scope>
+    </dependency>
+        
+    <dependency>
+    	<groupId>es.tekniker.framework.ktek</groupId>
+    	<artifactId>questionnaire.mng.contextbroker.client</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+    	<scope>compile</scope>
+    </dependency>
+    
+   <dependency>
+		<groupId>log4j</groupId>
+		<artifactId>log4j</artifactId>
+		<version>1.2.14</version>
+	</dependency>
+  
+   <dependency>
+		<groupId>junit</groupId>
+		<artifactId>junit</artifactId>
+		<version>4.8.2</version>
+		<scope>test</scope>
+	</dependency>
+	
+	
+	<dependency>
+		<groupId>org.codehaus.jackson</groupId>
+		<artifactId>jackson-mapper-asl</artifactId>
+		<version>1.8.5</version>
+	</dependency>
+ 
+  </dependencies>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <configuration>
+            <source>1.5</source>
+            <target>1.5</target>
+            <skipTests>true</skipTests>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-eclipse-plugin</artifactId>
+          <configuration>
+            <projectNameTemplate>[artifactId]-[version]</projectNameTemplate>
+            <wtpmanifest>true</wtpmanifest>
+            <wtpapplicationxml>true</wtpapplicationxml>
+            <wtpversion>2.0</wtpversion>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+</project>

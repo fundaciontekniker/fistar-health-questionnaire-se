@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="es.tekniker.framework.ktek.Ktek_questionnaireitem" table="`ktek_questionnaireitem`" schema="ktek_questionnaire" lazy="false">
+		<id name="ktek_pk_idquestionnaireitem" column="`ktek_pk_idquestionnaireitem`" type="integer">
+			<generator class="assigned">
+			</generator>
+		</id>
+		<property name="ktek_uk_codquestionnaireitem" column="`ktek_uk_codquestionnaireitem`" index="ktek_questionnaireitem_ktek_uk_codquestionnaireitem_key" type="string" length="50" not-null="true" lazy="false"/>
+		<property name="namequestionnaireitem" column="`namequestionnaireitem`" type="string" length="255" not-null="true" lazy="false"/>
+		<property name="desquestionnaireitem" column="`desquestionnaireitem`" type="string" length="255" not-null="false" lazy="false"/>
+		<property name="typequestionnaireitem" column="`typequestionnaireitem`" type="short" not-null="true" lazy="false"/>
+		<property name="isrequired" column="`isrequired`" type="short" not-null="true" lazy="false"/>
+		<property name="isdeleted" column="`isdeleted`" type="short" not-null="true" lazy="false"/>
+		<one-to-one name="ktek_parameter" class="es.tekniker.framework.ktek.Ktek_parameter" cascade="save-update,lock" lazy="false"/>
+		<set name="ktek_qitem_section" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="`ktek_fk_idquestionnaireitem`" not-null="true"/>
+			<one-to-many class="es.tekniker.framework.ktek.Ktek_qitem_section"/>
+		</set>
+		<one-to-one name="ktek_question" class="es.tekniker.framework.ktek.Ktek_question" cascade="save-update,lock" lazy="false"/>
+		<set name="ktek_questionnaireitem_codification" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="`ktek_fk_idquestionnaireitem`" not-null="true"/>
+			<one-to-many class="es.tekniker.framework.ktek.Ktek_questionnaireitem_codification"/>
+		</set>
+		<set name="ktek_result_questionnaireitem" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="`ktek_fk_idquestionnaireitem`" not-null="true"/>
+			<one-to-many class="es.tekniker.framework.ktek.Ktek_result_questionnaireitem"/>
+		</set>
+	</class>
+</hibernate-mapping>

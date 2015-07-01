@@ -1,0 +1,52 @@
+
+/* Extra small devices (phones, less than 768px)
+**********************************************************/
+
+.quesionnaire-score
+{
+    color: #585858;    
+    font-size: 24px;    
+    font-weight: bold;    
+    background-color: #f9f9f9;
+    padding: 5px 10px;
+}
+.questionnaire 
+{
+    
+}
+.questionnaire .questionnaire-section 
+{
+    color: #585858;
+    border-left: 1px #585858 solid;
+    padding: 10px 20px;
+    background-color: #f9f9f9;
+}
+.questionnaire .questionnaire-section-item
+{
+    padding: 10px;
+}
+.questionnaire .questionnaire-section-item h4
+{
+    color: #585858;
+}
+
+/* Small devices (tablets, 768px and up) 
+**********************************************************/
+@media (min-width: 768px) 
+{
+
+}
+
+/* Medium devices (desktops, 992px and up) 
+**********************************************************/
+@media (min-width: 992px) 
+{
+    
+}
+
+/* Large devices (large desktops, 1200px and up) 
+**********************************************************/
+@media (min-width: 1200px) 
+{
+    
+}

@@ -1,0 +1,14 @@
+This file lists all the third party javascript libraries that are needed for the web site and available inside the plugins folder.
+
+bootstrap The MIT License (MIT)
+c3 The MIT License (MIT)
+d3 The MIT License (MIT)
+i18next The MIT License (MIT)
+jquery The MIT License (MIT)
+json2 The MIT License (MIT)
+knockout The MIT License (MIT)
+knockout-i18next The MIT License (MIT)
+knockout-mapping The MIT License (MIT)
+knockout-template-engine The MIT License (MIT)
+knockout-validation The MIT License (MIT)
+moment The MIT License (MIT)

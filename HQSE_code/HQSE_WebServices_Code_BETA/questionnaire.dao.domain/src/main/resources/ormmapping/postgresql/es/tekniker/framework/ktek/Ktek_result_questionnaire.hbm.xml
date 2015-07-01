@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="es.tekniker.framework.ktek.Ktek_result_questionnaire" table="`ktek_result_questionnaire`" schema="ktek_questionnaire" lazy="false">
+		<id name="ktek_pk_idresultquestionnaire" column="`ktek_pk_idresultquestionnaire`" type="integer" unsaved-value="0">
+			<generator class="sequence">
+				<param name="sequence">ktek_questionnaire.ktek_result_questionnaire_ktek_pk_idresultquestionnaire_seq</param>
+			</generator>
+		</id>
+		<property name="codtelecareprogram" column="`codtelecareprogram`" type="string" length="50" not-null="true" lazy="false"/>
+		<property name="coduserid" column="`coduserid`" type="string" length="50" not-null="true" lazy="false"/>
+		<many-to-one name="ktek_fk_idquestionnaire" cascade="lock" column="`ktek_fk_idquestionnaire`" class="es.tekniker.framework.ktek.Ktek_questionnaire" not-null="false" lazy="false">
+		</many-to-one>
+		<many-to-one name="ktek_fk_iduserquestionnaireplanning" column="`ktek_fk_iduserquestionnaireplanning`" class="es.tekniker.framework.ktek.Ktek_userquestionnaire_planning" cascade="save-update,lock" unique="true" not-null="false" lazy="false">
+		</many-to-one>
+		<property name="evaluationscorequestionnaire" column="`evaluationscorequestionnaire`" type="short" not-null="true" lazy="false"/>
+		<property name="resultcreation" column="`resultcreation`" type="long" not-null="true" lazy="false"/>
+		<set name="ktek_result_questionnairesection" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="`ktek_fk_idresultquestionnaire`" not-null="true"/>
+			<one-to-many class="es.tekniker.framework.ktek.Ktek_result_questionnairesection"/>
+		</set>
+	</class>
+</hibernate-mapping>

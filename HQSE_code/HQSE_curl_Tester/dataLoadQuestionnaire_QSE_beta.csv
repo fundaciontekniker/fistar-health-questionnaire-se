@@ -1,0 +1,217 @@
+TABLE;ktek_pk_idquestionnaire;idpathology;ktek_uk_codquestionnaire;namequestionnaire;desquestionnaire;desinstructionsquestionnaire;desevaluation;ismultisection;typequestionnaire;typesortorder;typequestionnaireflow;datevalidfrom;datevalidto;datecreation;typemonitoringactivity;periodicityunit;periodictyvalue;collectiontimefrom;collectiontimeto;completionintervalunit;completionintervalvalue;isdeleted") 
+ktek_questionnaire;1; 1; QA1; What is bipolar disorder?;  ; Please answer the following questions.;  ; 0; 1; 2; 1; 1412057729945; null; 1388530800000; 0; null; null; null; null; null; null; 0
+ktek_questionnaire;2; 1; QM1; Questionnairemonitoring status;  ; Please answer the following questions.;  ; 0; 2; 2; 2; 1412057729945; null; 1425596400000; 1; 1; 1; 0; 86364000; null; null; 0
+ktek_questionnaire;3; null; QDF; Drug intake folllow up; ; Please answer the following questions.;  ; 0; 2; 2; 2; 1412057729945; null; 1425596400000; 3; 1; 1; 0; 86364000; null; null; 0
+ktek_questionnaire;4; null; QDSE; Side effects; ; Please answer the following questions.; ; 0; 2; 2; 2; 1412057729945; null; 1425596400000; 4; 1; 1; 0; 86364000; null; null; 0
+ktek_questionnaire;5; null; QH4; MDQTest ; Questionnaire related to mood disorders.; Please answer the following questions.; >7 items assertives (points) as cutoff.; 0; 2; 2; 2; 1412057729945; null; 1425596400000; 2; 4; 1; 0; 86364000; 1; 29; 0
+
+TABLE;ktek_pk_idformatquestionnaire; ktek_fk_questionnaire; formatpagination; formatintegerparameter; formatdecimalparameter; formatsetuniqueitem; formatsetmultitem
+ktek_formatquestionnaire;1;1;1;1;1;1;1
+ktek_formatquestionnaire;2;2;1;1;1;1;1
+ktek_formatquestionnaire;3;3;1;1;1;1;1
+ktek_formatquestionnaire;4;4;1;1;1;1;1
+ktek_formatquestionnaire;5;5;1;1;1;1;1
+
+TABLE;ktek_pk_idquestionnairesection;namequestionnairesection;desquestionnairesection;desquestionnairesectioninstructions 
+ktek_questionnairesection;1;Monitoring parameters; ; 
+ktek_questionnairesection;2;Drug intake; ; 
+ktek_questionnairesection;3;Side effects; ;  
+ktek_questionnairesection;4;What is the bipolar disorder?;  ;  
+ktek_questionnairesection;5;Have you ever had this month some period of time that was not your usual self and ...;  ;   
+
+TABLE;ktek_pk_idquestionnaireitem;ktek_uk_codquestionnaireitem;namequestionnaireitem;desquestionnaireitem;typequestionnaireitem;isrequired;isdeleted 
+ktek_questionnaireitem; 1; OH; Alcohol intake;  ; 2; 1; 0
+ktek_questionnaireitem; 2; Mood; Mood;  ; 2; 1; 0
+ktek_questionnaireitem; 3; AE; Stressful events;  ; 2; 1; 0
+ktek_questionnaireitem; 4; Sñ; Sleep hours;  ; 1; 1; 0
+ktek_questionnaireitem; 5; Drg; Drugs intake;  ; 2; 1; 0
+ktek_questionnaireitem; 6; AEV; AE rating;  ; 2; 1; 0
+ktek_questionnaireitem; 7; Dizziness; Dizziness;  ; 2; 1; 0
+ktek_questionnaireitem; 8; Tremors; Tremors;  ; 2; 1; 0
+ktek_questionnaireitem; 9; Adherence; Have you taken your drugs;  ; 2; 1; 0
+ktek_questionnaireitem; 10; Side effects; Have you had any new side effects; Identify if you had any side effects so we can adjust your medication; 2; 1; 0
+ktek_questionnaireitem; 11; QA1; What is bipolar disorder;  ; 2; 1; 0
+ktek_questionnaireitem; 12; QA2; What are the factors causing the disease;  ; 2; 1; 0
+ktek_questionnaireitem; 13; QA3; If you have a genetic predisposition to inherit the disease. Ever developed;  ; 2; 1; 0
+ktek_questionnaireitem; 14; QA4; Bipolar disorder ...; ; 2; 1; 0
+ktek_questionnaireitem;15; QH65; I expect the future with hope and enthusiasm;  ; 2; 1; 0;
+ktek_questionnaireitem;16; QH66; I can give up because I can not do things by myself better;  ; 2; 1; 0;
+ktek_questionnaireitem;17; QH67; When things go wrong I am relieved to know that things can not stay long way;  ; 2; 1; 0;
+ktek_questionnaireitem;18; QH68; I can not imagine how my life will be in 10 years;  ; 2; 1; 0;
+ktek_questionnaireitem;19; QH69; I have enough time to carry out the things I want to do..; ; 2; 1; 0;
+ktek_questionnaireitem;20; QH70; In the future I hope you can get what interested me; ; 2; 1; 0;
+ktek_questionnaireitem;21; QH71; My future seems dark;  ; 2; 1; 0;
+ktek_questionnaireitem;22; QH72; I expect more good things in life than people usually get on average; ; 2; 1; 0;
+ktek_questionnaireitem;23; QH73; I can not make a difference and there is no reason to believe he can in the future;  ; 2; 1; 0;
+ktek_questionnaireitem;24; QH74; My past experiences have prepared me well for my future;  ; 2; 1; 0;
+ktek_questionnaireitem;25; QH75; All I can see in front of me is more unpleasant than pleasant;  ; 2; 1; 0;
+ktek_questionnaireitem;26; QH76; I do not expect to get what I really want. ;  ; 2; 1; 0;
+ktek_questionnaireitem;27; QH77; When I look ahead I hope that I will be happier than I am now;  ; 2; 1; 0;
+ktek_questionnaireitem;28; QH78; Things do not go as I wanted;  ; 2; 1; 0;
+ktek_questionnaireitem;29; QH79; I have great confidence in the future. ;  ; 2; 1; 0;
+ktek_questionnaireitem;30; QH80; I never get what I want so it is absurd to want anything;   ; 2; 1; 0;
+ktek_questionnaireitem;31; QH81; It is very unlikely to achieve true satisfaction in the future;   ; 2; 1; 0;
+ktek_questionnaireitem;32; QH82; The future seems vague and uncertain..;   ; 2; 1; 0;
+
+
+
+TABLE;ktek_pk_idanswerset;codanswersetl;nameanswerset
+ktek_answerset;  1; AS1; Yes-No
+ktek_answerset;  2; AS2; Positive-Negative
+ktek_answerset;  3; AS3; Mood
+ktek_answerset;  4; AS4; Intensity
+ktek_answerset;  5; AS5; True-False
+ktek_answerset;  6; AS8; True-False-reverse
+
+TABLE;ktek_fk_idquestionnaireitem;typeanswersortorder;typeanswer;formatanswerunique;ktek_fk_idanswerset;weightquestion
+ktek_question; 1; 2; 3; null; 1; 1
+ktek_question; 2; 2; 3; null; 3; 1
+ktek_question; 3; 2; 3; null; 1; 1
+ktek_question; 5; 2; 3; null; 1; 1
+ktek_question; 6; 2; 3; null; 2; 1
+ktek_question; 7; 2; 3; null; 4; 1
+ktek_question; 8; 2; 3; null; 4; 1
+ktek_question; 9; 2; 3; null; 1; 1
+ktek_question; 10; 2; 1; 4; null; 1
+ktek_question; 11; 2; 5; null; null; 1
+ktek_question; 12; 2; 5; null; null; 1
+ktek_question; 13; 2; 5; null; null; 1
+ktek_question; 14; 2; 5; null; null; 1
+ktek_question; 15; 2; 3; null; 6; 1
+ktek_question; 16; 2; 3; null; 5; 1
+ktek_question; 17; 2; 3; null; 6; 1
+ktek_question; 18; 2; 3; null; 5; 1
+ktek_question; 19; 2; 3; null; 6; 1
+ktek_question; 20; 2; 3; null; 6; 1
+ktek_question; 21; 2; 3; null; 5; 1
+ktek_question; 22; 2; 3; null; 6; 1
+ktek_question; 23; 2; 3; null; 5; 1
+ktek_question; 24; 2; 3; null; 6; 1
+ktek_question; 25; 2; 3; null; 5; 1
+ktek_question; 26; 2; 3; null; 5; 1
+ktek_question; 27; 2; 3; null; 6; 1
+ktek_question; 28; 2; 3; null; 5; 1
+ktek_question; 29; 2; 3; null; 6; 1
+ktek_question; 30; 2; 3; null; 5; 1
+ktek_question; 31; 2; 3; null; 5; 1
+ktek_question; 32; 2; 3; null; 5; 1
+
+TABLE;ktek_pk_idanswer;ktek_fk_idquestionnaireitem;ktek_uk_codanswer;nameanswer;desanswer;imageanswer;scoreanswer 
+ktek_answer;  1; null; A1; Yes;  ; null; 1
+ktek_answer;  2; null; A2; No;  ; null; 0
+ktek_answer;  3; null; A3; True;  ; null; 1
+ktek_answer;  4; null; A4; False;  ; null; 0
+ktek_answer;  5; null; A5; Very happy;  ; null; 2
+ktek_answer;  6; null; A6; Happy;  ; null; 1
+ktek_answer;  7; null; A7; Normal;  ; null; 0
+ktek_answer;  8; null; A8; Sad;  ; null; -1
+ktek_answer;  9; null; A9; Very sad;  ; null; -2
+ktek_answer;  10; null; A10; Positive;  ; null; 1
+ktek_answer;  11; null; A11; Negative;  ; null; 0
+ktek_answer;  12; null; A12; Very strong;  ; null; 4
+ktek_answer;  13; null; A13; Strong;  ; null; 3
+ktek_answer;  14; null; A14; Slight;  ; null; 2
+ktek_answer;  15; null; A15; Very slight;  ; null; 1
+ktek_answer;  16; null; A16; Rarely;  ; null; 0
+ktek_answer;  17; null; A17; Sometimes;  ; null; 1
+ktek_answer;  18; null; A18; Often;  ; null; 2
+ktek_answer;  19; null; A19; Usually;  ; null; 3
+ktek_answer;  20; null; A20; None;  ; null; 0
+ktek_answer;  21; null; A21; Slight;  ; null; 1
+ktek_answer;  22; null; A22; Quite;  ; null; 2
+ktek_answer;  23; null; A23; A lot;  ; null; 3
+ktek_answer;  24; 11; A24; It is a disease in which the patient has split personality; null; null; 1
+ktek_answer;  25; 11; A25; It is an alteration in the mechanisms that regulate mood and so the person who suffers it goes through periods of euphoria and depression;  ; null; 0
+ktek_answer;  26; 11; A26; Bipolar disorder is an invention of doctors really not a disease..;  ; null; 1
+ktek_answer;  27; 12; A27; A breakup; null; null; 1
+ktek_answer;  28; 12; A28; In most cases it is a disease with a genetic component;  ; null; 0
+ktek_answer;  29; 12; A29; Drugs; null; null; 1
+ktek_answer;  30; 13; A30; If genetic factors are determinants for this disease;  ; null; 1
+ktek_answer;  31; 13; A31; There are environmental factors that can influence whether or not develop the disease;  ; null; 0
+ktek_answer;  32; 13; A32; We all have the same genes;  ; null; 1
+ktek_answer;  33; 14; A33; It is a rare disease and not much she knows;  ; null; 1
+ktek_answer;  34; 14; A34; It is a flu-like illness that happens to almost everyone every year..;  ; null; 1
+ktek_answer;  35; 14; A35; It is a chronic disorder that many people suffer but with proper treatment can lead a normal life;  ; null; 0
+ktek_answer;  36; null; A3-reordered; True;  ; null; 0
+ktek_answer;  37; null; A4-reordered; False;  ; null; 1
+ktek_answer;  38; null; A152; None;  ; null; 0
+ktek_answer;  39; null; A153; Slight;  ; null; 1
+ktek_answer;  40; null; A154; Quite;  ; null; 2
+ktek_answer;  41; null; A155; A lot;  ; null; 3
+
+
+
+
+TABLE;ktek_fk_idanswerset;ktek_fk_idanswer
+ktek_answerset_answer;  1; 1
+ktek_answerset_answer;  1; 2
+ktek_answerset_answer;  2; 10
+ktek_answerset_answer;  2; 11
+ktek_answerset_answer;  3; 5
+ktek_answerset_answer;  3; 6
+ktek_answerset_answer;  3; 7
+ktek_answerset_answer;  3; 8
+ktek_answerset_answer;  3; 9
+ktek_answerset_answer;  4; 12
+ktek_answerset_answer;  4; 13
+ktek_answerset_answer;  4; 14
+ktek_answerset_answer;  4; 15
+ktek_answerset_answer;  5; 3
+ktek_answerset_answer;  5; 4
+ktek_answerset_answer;  6; 36
+ktek_answerset_answer;  6; 37
+
+
+TABLE;ktek_fk_idquestionnairesection;ktek_fk_idquestionnaireitem;sortorder
+ktek_qitem_section;  1; 2; 1
+ktek_qitem_section;  1; 4; 2
+ktek_qitem_section;  1; 3; 3
+ktek_qitem_section;  1; 6; 4
+ktek_qitem_section;  1; 1; 5
+ktek_qitem_section;  1; 5; 6
+ktek_qitem_section;  1; 7; 7
+ktek_qitem_section;  1; 8; 8
+ktek_qitem_section;  4; 11; 1
+ktek_qitem_section;  4; 12; 2
+ktek_qitem_section;  4; 13; 3
+ktek_qitem_section;  4; 14; 4
+ktek_qitem_section;  2; 9; 1
+ktek_qitem_section;  3; 10; 1
+ktek_qitem_section;  5; 15; 1
+ktek_qitem_section;  5; 16; 1
+ktek_qitem_section;  5; 17; 1
+ktek_qitem_section;  5; 18; 1
+ktek_qitem_section;  5; 19; 1
+ktek_qitem_section;  5; 20; 1
+ktek_qitem_section;  5; 21; 1
+ktek_qitem_section;  5; 22; 1
+ktek_qitem_section;  5; 23; 1
+ktek_qitem_section;  5; 24; 1
+ktek_qitem_section;  5; 25; 1
+ktek_qitem_section;  5; 26; 1
+ktek_qitem_section;  5; 27; 1
+ktek_qitem_section;  5; 28; 1
+ktek_qitem_section;  5; 29; 1
+ktek_qitem_section;  5; 30; 1
+ktek_qitem_section;  5; 31; 1
+ktek_qitem_section;  5; 32; 1
+
+
+TABLE;ktek_fk_idquestionnaire;ktek_fk_idquestionnairesection;sortorder 
+ktek_qsection_questionnaire; 1; 4; 1
+ktek_qsection_questionnaire; 2; 1; 1
+ktek_qsection_questionnaire; 3; 2; 1
+ktek_qsection_questionnaire; 4; 3; 1
+ktek_qsection_questionnaire; 5; 5; 1
+	
+TABLE;ktek_fk_idquestionnaireitem;typeparameter;typedatacapture;valuedefault;valuemin;valuemax	
+ktek_parameter; 4; 1; 3; null; 0; 24
+
+TABLE;ktek_pk_idunit;ktek_uk_codunit 
+ktek_unit;1;Hour
+
+TABLE;ktek_fk_idquestionnaireitem;ktek_fk_idunit;valueconversion;isdefault 
+ktek_unit_parameter;4;1;1;1
+
+TABLE;ktek_pk_ktek_idquestionnaireconfiguration;ktek_typesave;endpointserver;eventserviceoauth2headertoken;timeout;port
+ktek_questionnaireconfiguration;1;1;0;0;5000;0 

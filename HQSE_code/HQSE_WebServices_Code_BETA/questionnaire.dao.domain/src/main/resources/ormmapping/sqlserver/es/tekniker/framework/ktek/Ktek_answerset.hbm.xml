@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="es.tekniker.framework.ktek.Ktek_answerset" table="`ktek_answerset`" schema="ktek_questionnaire" lazy="false">
+		<id name="ktek_pk_idanswerset" column="`ktek_pk_idanswerset`" type="integer">
+			<generator class="assigned">
+			</generator>
+		</id>
+		<property name="codanswersetl" column="`codanswersetl`" type="string" length="50" not-null="false" lazy="false"/>
+		<property name="nameanswerset" column="`nameanswerset`" type="string" length="50" not-null="true" lazy="false"/>
+		<set name="ktek_fk_idanswer" table="`ktek_answerset_answer`" schema="ktek_questionnaire" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="`ktek_fk_idanswerset`" not-null="true"/>
+			<many-to-many column="`ktek_fk_idanswer`" class="es.tekniker.framework.ktek.Ktek_answer">
+			</many-to-many>
+		</set>
+		<set name="ktek_question" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="`ktek_fk_idanswerset`" not-null="false"/>
+			<one-to-many class="es.tekniker.framework.ktek.Ktek_question"/>
+		</set>
+	</class>
+</hibernate-mapping>

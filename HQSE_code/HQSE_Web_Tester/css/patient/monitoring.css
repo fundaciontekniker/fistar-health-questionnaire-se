@@ -1,0 +1,80 @@
+
+/* Extra small devices (phones, less than 768px)
+**********************************************************/        
+
+/* panel */
+
+.panel-heading.panel-heading-monitoring
+{
+    background-color: #920C5A !important;
+    color: #fff !important;
+}
+.panel-heading-monitoring span 
+{
+    color: #fff !important;
+}
+
+/* buttons */
+
+.btn-default.btn-monitoring {
+    text-align: left !important;
+    white-space: normal !important;
+}
+.btn-monitoring:hover,
+.btn-monitoring:focus,
+.btn-monitoring:active,
+.btn-monitoring.active {
+    color: #fff !important;
+    background-color: #920C5A !important;
+}
+
+/*queestionnaires*/
+
+.questionnaire.questionnaire-monitoring
+{
+    
+}
+.questionnaire-monitoring .panel-heading
+{
+    background-color: #920C5A !important;
+    color: #fff !important;
+}
+.questionnaire-monitoring .questionnaire-section 
+{
+    color: #920C5A !important;
+    border-left: 1px #920C5A solid !important;
+}
+.questionnaire-monitoring .questionnaire-section-item
+{
+    
+}
+.questionnaire-monitoring .questionnaire-section-item h4
+{
+    color: #920C5A !important;
+}
+.questionnaire-monitoring .btn:hover,
+.questionnaire-monitoring .btn:focus,
+.questionnaire-monitoring .btn:active,
+.questionnaire-monitoring .btn.active
+{
+  color: #fff !important;
+  background-color: #920C5A !important;
+}
+
+/* Small devices (tablets, 768px and up) 
+**********************************************************/
+@media (min-width: 768px) 
+{ 
+}        
+
+/* Medium devices (desktops, 992px and up) 
+**********************************************************/
+@media (min-width: 992px) 
+{
+}
+
+/* Large devices (large desktops, 1200px and up) 
+**********************************************************/
+@media (min-width: 1200px) 
+{
+} 

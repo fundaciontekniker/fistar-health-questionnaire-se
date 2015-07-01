@@ -1,0 +1,80 @@
+
+/* Extra small devices (phones, less than 768px)
+**********************************************************/        
+
+/* panel */
+
+.panel-heading.panel-heading-treatment
+{
+    background-color: #4A6EA1 !important;
+    color: #fff !important;
+}
+.panel-heading-treatment span 
+{
+    color: #fff !important;
+}
+
+/* buttons */
+
+.btn-default.btn-treatment {
+    text-align: left !important;
+    white-space: normal !important;
+}
+.btn-treatment:hover,
+.btn-treatment:focus,
+.btn-treatment:active,
+.btn-treatment.active {
+    color: #fff !important;
+    background-color: #4A6EA1 !important;
+}
+
+/*queestionnaires*/
+
+.questionnaire.questionnaire-treatment
+{
+    
+}
+.questionnaire-treatment .panel-heading
+{
+    background-color: #4A6EA1 !important;
+    color: #fff !important;
+}
+.questionnaire-treatment .questionnaire-section 
+{
+    color: #4A6EA1 !important;
+    border-left: 1px #4A6EA1 solid !important;
+}
+.questionnaire-treatment .questionnaire-section-item
+{
+    
+}
+.questionnaire-treatment .questionnaire-section-item h4
+{
+    color: #4A6EA1 !important;
+}
+.questionnaire-treatment .btn:hover,
+.questionnaire-treatment .btn:focus,
+.questionnaire-treatment .btn:active,
+.questionnaire-treatment .btn.active
+{
+  color: #fff !important;
+  background-color: #4A6EA1 !important;
+}
+
+/* Small devices (tablets, 768px and up) 
+**********************************************************/
+@media (min-width: 768px) 
+{ 
+}        
+
+/* Medium devices (desktops, 992px and up) 
+**********************************************************/
+@media (min-width: 992px) 
+{
+}
+
+/* Large devices (large desktops, 1200px and up) 
+**********************************************************/
+@media (min-width: 1200px) 
+{
+} 

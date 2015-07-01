@@ -1,0 +1,34 @@
+{
+  "global-app": {
+    "confirm-operation": "Do you want to continue with operation?",
+    "success-operating-data": "Operation succeeded.",
+    "error-unknown": "Unknown error.",
+    "error-service-result": "Sorry, an unexpected error occurred while processing your request.",
+    "error-building-ui": "Sorry, an unexpected error occurred while building user interface.",
+    "error-loading-data": "Sorry, an unexpected error occurred while loading data.",
+    "error-recovering-data": "Sorry, an unexpected error occurred while recovering data.",
+    "error-operating-data": "Sorry, an unexpected error occurred while processing your operation.",
+    "action-send": "Send",
+    "action-save": "Save",
+    "action-return": "Return",
+    "action-select": "Browse...",
+    "no-results": "No results"
+  },
+  "global-messagebar": {
+    "success": "¡Congratulations!",
+    "info": "Information",
+    "warning": "Warning!",
+    "danger": "Danger!"
+  },
+  "page-questionnaire": {
+    "header": "QUESTIONNAIRE",
+    "instructions": "Instructions",
+    "error-send": "Sorry, an unexpected error occurred while sending questionnaire.",
+    "error-validation": "Sorry, validation errors occurred, check the errormessages and try again.",
+    "warning-send": "Sorry, It has not been detected an internet connection to send the questionnaire."
+  },
+  "page-questionnaire-notification": {
+    "header": "QUESTIONNAIRE RESULT",
+    "success-message": "The questionnaire has been send successfully."
+  }  
+}

@@ -1,0 +1,6 @@
+var QSE_WS_PROTOCOL = "http://";
+var QSE_WS_HOST = "HQSE_IP_SERVER";
+var QSE_WS_PORT = "8080";
+var QSE_WS_TIMEOUT = 10000; // milliseconds
+
+function BuildQuestionnaireRootURL() {return QSE_WS_PROTOCOL + QSE_WS_HOST + ":" + QSE_WS_PORT;}

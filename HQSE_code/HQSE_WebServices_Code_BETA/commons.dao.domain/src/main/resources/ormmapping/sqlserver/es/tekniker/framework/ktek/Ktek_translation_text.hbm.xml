@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="es.tekniker.framework.ktek.Ktek_translation_text" table="`ktek_translation_text`" schema="ktek_commons" lazy="false">
+		<id name="ktek_pk_translation_text" column="`ktek_pk_translation_text`" type="integer" unsaved-value="0">
+			<generator class="identity">
+			</generator>
+		</id>
+		<property name="ktek_idregister" column="`ktek_idregister`" index="ktek_uk_translation" type="long" not-null="true" lazy="false"/>
+		<property name="ktek_keycolum" column="`ktek_keycolum`" index="ktek_uk_translation" type="string" length="255" not-null="true" lazy="false"/>
+		<many-to-one name="ktek_fk_language" cascade="lock" column="`ktek_fk_language`" index="ktek_uk_translation" class="es.tekniker.framework.ktek.Ktek_language" not-null="true" lazy="false">
+		</many-to-one>
+		<property name="ktek_columvalue" column="`ktek_columvalue`" type="text" not-null="true" lazy="false"/>
+	</class>
+</hibernate-mapping>

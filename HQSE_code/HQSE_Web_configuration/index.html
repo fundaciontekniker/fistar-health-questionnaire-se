@@ -1,0 +1,150 @@
+<!--
+ 
+ Copyright 2015 IK4-Tekniker All Rights Reserved
+
+ This file is part of Health Questionnaire SE at FISTAR https://www.fi-star.eu/  
+
+ Health Questionnaire SE is free software: you can redistribute it and/or
+ modify it under the terms of the GNU Affero General Public License as
+ published by the Free Software Foundation, either version 3 of the
+ License, or (at your option) any later version.
+
+ Health Questionnaire SE is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero
+ General Public License for more details.
+
+ You should have received a copy of the GNU Affero General Public License
+ along with Health Questionnaire SE. If not, see http://www.gnu.org/licenses/.
+
+ For those usages not covered by this license please contact with
+ patricia.casla at tekniker dot es
+
+ Author: Rubén Ferreira Pérez
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <!-- TITLE -->   
+        <!-- ======================================================================= -->
+
+        <title>HQSE CONFIGURATOR</title>        
+        <link rel="shortcut icon" href="favicon.ico" />    
+        
+        
+        <!-- METADATA -->
+        <!-- ======================================================================= -->        
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Tekniker, Fundación Tekniker, IK4-Tekniker">
+        
+        
+        <!-- CSS -->
+        <!-- ======================================================================= -->            
+        
+        <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css">
+        <style type="text/css">
+            .validationMessage {
+                color: red;
+                font-weight: bold;
+            }
+        </style>
+        
+    </head>
+    <body>                
+        
+        <!-- MESSAGES -->
+        <!-- ======================================================================= -->                
+        
+        <div class="alert alert-success alert-dismissible hidden" role="alert">
+            <strong>Well done!</strong> <span id="success-message"></span>
+        </div>                
+        
+        <div class="alert alert-danger alert-dismissible hidden" role="alert">
+            <strong>Warning!</strong> <span id="danger-message"></span>
+        </div>                
+        
+        <!-- CONTENT -->
+        <!-- ======================================================================= -->        
+      
+        <div id="page-container" class="container">            
+            <img src="img/logo-fistar.png" alt=""/>
+            <h2 id="page-header">QUESTIONNAIRE SE CONFIGURATOR</h2>
+            <div class="well well-lg">            
+                <form>
+                    <label>Publish  data to</label>
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="typesave" data-bind="checkedValue: 1, checked: $data.KtekQuestionnaireConfiguration().typesave">
+                        Database
+                      </label>
+                    </div>                    
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="typesave" data-bind="checkedValue: 2, checked: $data.KtekQuestionnaireConfiguration().typesave">
+                        Event Service SE
+                      </label>
+                    </div>                                        
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="typesave" data-bind="checkedValue: 3, checked: $data.KtekQuestionnaireConfiguration().typesave">
+                        Database && Event Service SE
+                      </label>
+                    </div>                                                            
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="typesave" data-bind="checkedValue: 4, checked: $data.KtekQuestionnaireConfiguration().typesave">
+                        Orion Context Broker GE
+                      </label>
+                    </div>                    
+                    <div class="radio">
+                      <label>
+                        <input type="radio" name="typesave" data-bind="checkedValue: 5, checked: $data.KtekQuestionnaireConfiguration().typesave">
+                        Database && Orion Context Broker GE
+                      </label>
+                    </div>
+                    <div class="form-group">
+                      <label for="endpointserver">Endpoint</label>
+                      <input type="text" class="form-control" id="endpointserver" name="endpointserver" data-bind="value: $data.KtekQuestionnaireConfiguration().endpointserver">
+                    </div>            
+                    <div class="form-group">
+                      <label for="port">Port</label>
+                      <input type="text" class="form-control" id="port" name="port" data-bind="value: $data.KtekQuestionnaireConfiguration().port">
+                    </div>
+                    <div class="form-group">
+                      <label for="timeout">Timeout</label>
+                      <input type="text" class="form-control" id="timeout" name="timeout" data-bind="value: $data.KtekQuestionnaireConfiguration().timeout">
+                    </div>
+                    <div class="form-group">
+                      <label for="eventserviceoauth2headertoken">EventService Oauth2 Header Token</label>
+                      <input type="text" class="form-control" id="eventserviceoauth2headertoken" name="eventserviceoauth2headertoken" data-bind="value: $data.KtekQuestionnaireConfiguration().eventserviceoauth2headertoken">
+                    </div>                    
+                    <button type="submit" class="btn btn-default" data-bind="click: $root.save">Save</button>
+                </form>
+            </div>
+        </div>
+        
+        
+        <!-- JAVASCRIPT-LIBS -->
+        <!-- ======================================================================= -->
+
+            <script type='text/javascript' src="plugins/jquery/jquery.min.js"></script>
+            <script type='text/javascript' src='plugins/knockout/knockout.min.js'></script>
+            <script type='text/javascript' src="plugins/knockout-mapping/knockout.mapping.min.js"></script>            
+            <script type='text/javascript' src="plugins/knockout-validation/knockout.validation.min.js"></script>
+            <script type='text/javascript' src="plugins/knockout-validation/knockout.validation.ext.min.js"></script>    
+            <script type='text/javascript' src="plugins/bootstrap/js/bootstrap.min.js"></script>
+
+
+        <!-- JAVASCRIPT-SOURCES -->
+        <!-- ======================================================================= -->
+
+        <script type='text/javascript' src='qse.settings'></script>
+        <script type='text/javascript' src='js/app.js'></script>
+
+        
+    </body>
+</html>

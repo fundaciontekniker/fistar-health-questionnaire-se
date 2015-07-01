@@ -1,0 +1,21 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>es.tekniker.framework.ktek</groupId>
+  <artifactId>commons.mng</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <name>Commons Management parent project</name>
+  <description>Project to group the different artifacts of Commons Management</description>
+   <modules>
+    
+  	<module>../commons.dao.domain</module>
+  	<module>../commons.mng.bo</module>
+  	<module>../commons.mng.config</module>
+  	<module>../commons.mng.api</module>
+   	<module>../commons.mng.db</module>
+  	<module>../commons.mng.server</module>
+  	<module>../commons.mng.rest</module>  	
+  	
+  	
+   </modules>
+</project>

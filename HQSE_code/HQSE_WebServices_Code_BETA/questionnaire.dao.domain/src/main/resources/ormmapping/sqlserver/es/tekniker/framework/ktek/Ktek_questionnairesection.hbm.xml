@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="es.tekniker.framework.ktek.Ktek_questionnairesection" table="`ktek_questionnairesection`" schema="ktek_questionnaire" lazy="false">
+		<id name="ktek_pk_idquestionnairesection" column="`ktek_pk_idquestionnairesection`" type="integer">
+			<generator class="assigned">
+			</generator>
+		</id>
+		<property name="namequestionnairesection" column="`namequestionnairesection`" type="string" length="255" not-null="false" lazy="false"/>
+		<property name="desquestionnairesection" column="`desquestionnairesection`" type="string" length="255" not-null="false" lazy="false"/>
+		<property name="desquestionnairesectioninstructions" column="`desquestionnairesectioninstructions`" type="text" not-null="false" lazy="false"/>
+		<set name="ktek_qitem_section" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="`ktek_fk_idquestionnairesection`" not-null="true"/>
+			<one-to-many class="es.tekniker.framework.ktek.Ktek_qitem_section"/>
+		</set>
+		<set name="ktek_qsection_questionnaire" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="`ktek_fk_idquestionnairesection`" not-null="true"/>
+			<one-to-many class="es.tekniker.framework.ktek.Ktek_qsection_questionnaire"/>
+		</set>
+		<set name="ktek_result_questionnairesection" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="`ktek_fk_idquestionnairesection`" not-null="true"/>
+			<one-to-many class="es.tekniker.framework.ktek.Ktek_result_questionnairesection"/>
+		</set>
+	</class>
+</hibernate-mapping>

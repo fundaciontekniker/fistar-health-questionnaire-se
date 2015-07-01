@@ -1,0 +1,35 @@
+{
+  "global-app": {
+    "confirm-operation": "¿Estás seguro de que quieres continuar con la operación?",
+    "success-operating-data": "La operación se ha realizado correctamente.",
+    "error-unknown": "Error desconocido.",
+    "error-service-result": "El servicio respondió con un resultado inesperado.",
+    "error-building-ui": "Se han producido errores al intentar construir la interfaz de usuario.",
+    "error-loading-data": "Se han producido errores al intentar cargar los datos.",
+    "error-recovering-data": "Se han producido errores al intentar recuperar los datos.",
+    "error-operating-data": "Se han producido errores al intentar realizar la operación.",
+    "action-send": "Enviar",
+    "action-save": "Guardar",
+    "action-return": "Volver",
+    "action-select": "Selecionar...",
+    "no-results": "No hay resultados"
+  },
+  "global-messagebar": {
+    "success": "¡Enhorabuena!",
+    "info": "Información",
+    "warning": "¡Atención!",
+    "danger": "¡Atención!"
+  },
+  "page-questionnaire": {
+    "header": "CUESTIONARIO",
+    "instructions": "Instrucciones",
+    "error-send": "Se han producido errores al intentar enviar el cuestionario.",
+    "error-validation": "Se han producido errores de validación, comprueba si existen campos obligatorios sin respuesta.",
+    "warning-save": "No se ha detectado conexión a internet. El cuestionario se ha almacenado automáticamente para que puedas enviarlo más adelante.",
+    "success-save": "El cuestionario se ha guardado correctamente."
+  },
+  "page-questionnaire-notification": {
+    "header": "RESULTADO CUESTIONARIO",
+    "success-message": "El cuestionario se ha enviado correctamente."
+  }
+}

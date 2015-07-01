@@ -1,0 +1,127 @@
+<!--
+ 
+ Copyright 2015 IK4-Tekniker All Rights Reserved
+
+ This file is part of Health Questionnaire SE at FISTAR https://www.fi-star.eu/  
+
+ Health Questionnaire SE is free software: you can redistribute it and/or
+ modify it under the terms of the GNU Affero General Public License as
+ published by the Free Software Foundation, either version 3 of the
+ License, or (at your option) any later version.
+
+ Health Questionnaire SE is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero
+ General Public License for more details.
+
+ You should have received a copy of the GNU Affero General Public License
+ along with Health Questionnaire SE. If not, see http://www.gnu.org/licenses/.
+
+ For those usages not covered by this license please contact with
+ patricia.casla at tekniker dot es
+
+ Author: Rubén Ferreira Pérez
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+      
+      
+<!-- METADATA -->
+<!-- ======================================================================= -->
+
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Tekniker, Fundación Tekniker, IK4-Tekniker">
+    
+    
+<!-- TITLE -->   
+<!-- ======================================================================= -->
+    
+
+    <title></title>
+    <link rel="shortcut icon" href="../../../favicon.ico" />    
+    
+    
+<!-- CSS -->
+<!-- ======================================================================= -->
+
+
+    <link rel="stylesheet" href="../../../plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../css/common/app.css">  
+    <link rel="stylesheet" href="../../../css/common/notification.css">
+    
+    
+  </head>
+  <body>   
+      
+<!-- HEADER -->
+<!-- ======================================================================= -->
+    
+    
+    <div id="usc-messagebar" data-bind="template: { name: 'usercontrol-messagebar', templateUrl: '../../common' }"></div>
+    <!--./messagebar-->
+    
+    
+<!-- CONTENT -->
+<!-- ======================================================================= -->
+
+
+    <div id="page-container" class="container" data-bind="visible: display">
+        <h1 id="page-header" class="header text-center" data-bind="text: ko.i18n('page-questionnaire-notification.header')"></h1>
+        <!--/.header-->
+        <div class="notification center-block text-center">
+            <span class="glyphicon glyphicon-thumbs-up icon"></span>
+            <h3 data-bind="text: ko.i18n('page-questionnaire-notification.success-message')"></h3>
+            <div class="btn-group btn-group-vertical btn-block">
+                <a href="#" class="btn btn-default" data-bind="click: $root.goToMain">
+                    <span class="glyphicon glyphicon-share-alt"></span>&nbsp;
+                    <span data-bind="text: ko.i18n('global-app.action-return')"></span>
+                </a>
+            </div>
+        </div>
+        <!--/.notification-->
+    </div>   
+    <!--./content-->    
+      
+
+<!-- JAVASCRIPT-FIXES -->    
+<!-- ======================================================================= -->
+
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    
+    
+<!-- JAVASCRIPT-LIBS -->
+<!-- ======================================================================= -->
+    
+
+    <script type='text/javascript' src="../../../plugins/jquery/jquery.min.js"></script>
+    <script type='text/javascript' src="../../../plugins/moment/moment.min.js"></script>
+    <script type='text/javascript' src="../../../plugins/moment/moment-with-locales.min.js"></script>
+    <script type='text/javascript' src='../../../plugins/i18next/i18next.min.js'></script>
+    <script type='text/javascript' src='../../../plugins/knockout/knockout.min.js'></script>
+    <script type='text/javascript' src='../../../plugins/knockout-mapping/knockout.mapping.min.js'></script>
+    <script type='text/javascript' src='../../../plugins/knockout-i18next/knockout.i18next.min.js'></script>
+    <script type='text/javascript' src='../../../plugins/knockout-template-engine/koExternalTemplateEngine_all.min.js'></script>
+    <script type='text/javascript' src="../../../plugins/bootstrap/js/bootstrap.min.js"></script>
+    
+    
+<!-- JAVASCRIPT-SOURCES -->
+<!-- ======================================================================= -->
+
+
+    <script type='text/javascript' src='../../../js/common/services-configuration.js'></script>
+    <script type='text/javascript' src='../../../js/common/services.js'></script>
+    <script type='text/javascript' src='../../../js/common/app.js'></script>
+    <script type='text/javascript' src='../../../js/questionnaire/questionnaire-notification.js'></script>
+    
+    
+  </body>
+</html>

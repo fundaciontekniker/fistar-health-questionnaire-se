@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="es.tekniker.framework.ktek.Ktek_pathology" table="`ktek_pathology`" schema="ktek_commons" lazy="false">
+		<id name="ktek_pk_idpathology" column="`ktek_pk_idpathology`" type="integer" unsaved-value="0">
+			<generator class="identity">
+			</generator>
+		</id>
+		<property name="ktek_uk_codpathology" column="`ktek_uk_codpathology`" type="string" length="50" not-null="true" lazy="false"/>
+		<property name="namepathology" column="`namepathology`" type="string" length="50" not-null="true" lazy="false"/>
+		<property name="despathology" column="`despathology`" type="string" length="255" not-null="false" lazy="false"/>
+	</class>
+</hibernate-mapping>

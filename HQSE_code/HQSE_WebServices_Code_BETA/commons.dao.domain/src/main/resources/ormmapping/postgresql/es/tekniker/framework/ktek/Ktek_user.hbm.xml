@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="es.tekniker.framework.ktek.Ktek_user" table="`ktek_user`" schema="ktek_commons" lazy="false">
+		<id name="ktek_pk_iduser" column="`ktek_pk_iduser`" type="integer" unsaved-value="0">
+			<generator class="sequence">
+				<param name="sequence">ktek_commons.ktek_user_ktek_pk_iduser_seq</param>
+			</generator>
+		</id>
+		<property name="ktek_uk_coduser" column="`ktek_uk_coduser`" index="ktek_user_ktek_uk_coduser_key" type="string" length="255" not-null="true" lazy="false"/>
+		<set name="ktek_auditaccesslog" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="`idaccessuser`" not-null="true"/>
+			<one-to-many class="es.tekniker.framework.ktek.Ktek_auditaccesslog"/>
+		</set>
+		<set name="ktek_auditaccesslog1" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="`idaccesseduser`" not-null="true"/>
+			<one-to-many class="es.tekniker.framework.ktek.Ktek_auditaccesslog"/>
+		</set>
+		<one-to-one name="ktek_tpsettings" class="es.tekniker.framework.ktek.Ktek_tpsettings" cascade="save-update,lock" lazy="false"/>
+		<one-to-one name="ktek_user_ext" class="es.tekniker.framework.ktek.Ktek_user_ext" cascade="save-update,lock" lazy="false"/>
+		<one-to-one name="ktek_usersessiondata" class="es.tekniker.framework.ktek.Ktek_usersessiondata" cascade="save-update,lock" lazy="false"/>
+	</class>
+</hibernate-mapping>

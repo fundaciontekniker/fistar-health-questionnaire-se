@@ -1,0 +1,43 @@
+
+
+19
+{"KtekMonitoringQuestionnaireModelEntity":[{"idquestionnaire":3,"namequestionnaire":"Drug intake folllow up","desquestionnaire":"null","typemonitoringactivity":3,"idresultquestionnaire":0}]}
+
+20
+[{"idquestionnaireitem":9,"codquestionnaireitem":"Adherence","namequestionnaireitem":"Have you taken your drugs","valuemin":0.0,"valuemax":0.0,"values":[{"value":"1","date":1423048017353}]}]
+
+21
+[{"idquestionnaire":4,"namequestionnaire":"Side effects","desquestionnaire":"null","resultcreation":1423048021855,"idresultquestionnaire":18,"listquestions":null,"listparameters":null}]
+
+22
+{"KtekMonitoringQuestionnaireModelEntity":[{"idquestionnaire":4,"namequestionnaire":"Side effects","desquestionnaire":"null","typemonitoringactivity":4,"idresultquestionnaire":0}]}
+
+23
+[{"id":9,"name":"Have you taken your drugs"}]
+
+24
+[{"id":10,"name":"Have you had any new side effects"}]
+
+25
+[{"id":20,"name":"In the future I hope you can get what interested me"},{"id":25,"name":"All I can see in front of me is more unpleasant than pleasant"},{"id":26,"name":"I do not expect to get what I really want."},{"id":27,"name":"When I look ahead I hope that I will be happier than I am now"},{"id":17,"name":"When things go wrong I am relieved to know that things can not stay long way"},{"id":31,"name":"It is very unlikely to achieve true satisfaction in the future"},{"id":18,"name":"I can not imagine how my life will be in 10 years"},{"id":15,"name":"I expect the future with hope and enthusiasm"},{"id":21,"name":"My future seems dark"},{"id":19,"name":"I have enough time to carry out the things I want to do.."},{"id":32,"name":"The future seems vague and uncertain.."},{"id":24,"name":"My past experiences have prepared me well for my future"},{"id":28,"name":"Things do not go as I wanted"},{"id":30,"name":"I never get what I want so it is absurd to want anything"},{"id":29,"name":"I have great confidence in the future."},{"id":16,"name":"I can give up because I can not do things by myself better"},{"id":23,"name":"I can not make a difference and there is no reason to believe he can in the future"},{"id":22,"name":"I expect more good things in life than people usually get on average"}]
+
+26
+[{"id":2,"name":"Mood"},{"id":5,"name":"Drugs intake"},{"id":8,"name":"Tremors"},{"id":6,"name":"AE rating"},{"id":1,"name":"Alcohol intake"},{"id":3,"name":"Stressful events"},{"id":7,"name":"Dizziness"}]
+
+27
+{"id":2,"name":"Mood"},{"id":5,"name":"Drugs intake"},{"id":8,"name":"Tremors"},{"id":6,"name":"AE rating"},{"id":1,"name":"Alcohol intake"},{"id":3,"name":"Stressful events"},{"id":9,"name":"Have you taken your drugs"},{"id":7,"name":"Dizziness"}]
+
+28
+[]
+
+29
+[]
+
+30
+"KtekMonitoringQuestionnaireModelEntity":[{"idquestionnaire":5,"namequestionnaire":"MDQTest","desquestionnaire":"Questionnaire related to mood disorders.","typemonitoringactivity":2,"idresultquestionnaire":0}]}
+
+31
+[]
+
+32
+

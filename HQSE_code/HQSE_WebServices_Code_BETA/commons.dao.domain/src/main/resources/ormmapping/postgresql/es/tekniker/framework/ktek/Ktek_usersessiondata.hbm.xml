@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="es.tekniker.framework.ktek.Ktek_usersessiondata" table="`ktek_usersessiondata`" schema="ktek_commons" lazy="false">
+		<id name="ktek_fk_iduserId" column="`ktek_fk_iduser`" type="integer">
+			<generator class="foreign">
+				<param name="property">ktek_fk_iduser</param>
+			</generator>
+		</id>
+		<one-to-one name="ktek_fk_iduser" class="es.tekniker.framework.ktek.Ktek_user" cascade="all" constrained="true"/>
+		<property name="sessiontoken" column="`sessiontoken`" type="string" length="255" not-null="true" lazy="false"/>
+		<property name="dataexpiration" column="`dataexpiration`" type="long" not-null="true" lazy="false"/>
+	</class>
+</hibernate-mapping>

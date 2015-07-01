@@ -1,0 +1,59 @@
+<!--
+ 
+ Copyright 2015 IK4-Tekniker All Rights Reserved
+
+ This file is part of Health Questionnaire SE at FISTAR https://www.fi-star.eu/  
+
+ Health Questionnaire SE is free software: you can redistribute it and/or
+ modify it under the terms of the GNU Affero General Public License as
+ published by the Free Software Foundation, either version 3 of the
+ License, or (at your option) any later version.
+
+ Health Questionnaire SE is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero
+ General Public License for more details.
+
+ You should have received a copy of the GNU Affero General Public License
+ along with Health Questionnaire SE. If not, see http://www.gnu.org/licenses/.
+
+ For those usages not covered by this license please contact with
+ patricia.casla at tekniker dot es
+
+ Author: Rubén Ferreira Pérez
+-->
+<div class="messagebar">
+    <div data-bind="visible: dangerMessages().length > 0" class="alert alert-danger alert-dismissable" style="display: none">
+        <!--<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>-->
+        <span><strong data-bind="text: ko.i18n('global-messagebar.danger')"></strong></span>
+        <ul data-bind="foreach: dangerMessages">
+            <li data-bind="text: $data"></li>
+        </ul>            
+    </div>
+    <!--./message-danger-->
+    <div data-bind="visible: warningMessages().length > 0" class="alert alert-warning alert-dismissable" style="display: none">
+        <!--<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>-->
+        <span><strong data-bind="text: ko.i18n('global-messagebar.warning')"></strong></span><br />
+        <ul data-bind="foreach: warningMessages">
+            <li data-bind="text: $data"></li>
+        </ul>
+    </div>
+    <!--./message-warning-->
+    <div data-bind="visible: infoMessages().length > 0" class="alert alert-info alert-dismissable" style="display: none">
+        <!--<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>-->
+        <span><strong data-bind="text: ko.i18n('global-messagebar.info')"></strong></span><br />
+        <ul data-bind="foreach: infoMessages">
+            <li data-bind="text: $data"></li>
+        </ul>
+    </div>
+    <!--./message-info-->
+    <div data-bind="visible: successMessages().length > 0" class="alert alert-success alert-dismissable" style="display: none">
+        <!--<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>-->
+        <span><strong data-bind="text: ko.i18n('global-messagebar.success')"></strong></span><br />
+        <ul data-bind="foreach: successMessages">
+            <li data-bind="text: $data"></li>
+        </ul>
+    </div>
+    <!--./success-->
+</div>
+<!--./messagebar--> 

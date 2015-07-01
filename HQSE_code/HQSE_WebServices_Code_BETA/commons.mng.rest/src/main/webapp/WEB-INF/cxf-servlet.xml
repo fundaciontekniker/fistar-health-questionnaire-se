@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+       xmlns:jaxws="http://cxf.apache.org/jaxws"
+       xmlns:cxf="http://cxf.apache.org/core"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://cxf.apache.org/jaxrs
+                           http://cxf.apache.org/schemas/jaxrs.xsd
+                           http://cxf.apache.org/core
+                           http://cxf.apache.org/schemas/core.xsd">
+
+    <!-- do not use import statements if CXFServlet init parameters link to this beans.xml 
+    
+    http://fazlansabar.blogspot.com.es/2012/04/part-2-restful-ws-with-apache-cxf-json.html
+    
+    -->
+
+    <import resource="classpath:META-INF/cxf/cxf.xml"/>
+    <import resource="classpath:META-INF/cxf/cxf-servlet.xml"/>
+	 
+	 <!--Here we are adding jacksonJsonProvider for JSON parser-->
+	<bean id="jacksonJsonProvider" class="es.tekniker.framework.ktek.commons.rest.CustomJsonProvider" />
+		 
+    <jaxrs:server id="CommonsServices" address="/rest/ktek/commons/">
+        <jaxrs:serviceBeans>
+            <ref bean="commonsServicesBean"/>
+        </jaxrs:serviceBeans>
+        <jaxrs:extensionMappings>
+            <entry key="xml" value="application/xml" />
+            <entry key="json" value="application/json" />
+        </jaxrs:extensionMappings>
+        <jaxrs:features>
+            <cxf:logging/>
+        </jaxrs:features>
+        <jaxrs:providers>        
+        	<bean class="es.tekniker.framework.ktek.exception.ExceptionHandler"/>
+        	<ref bean="jacksonJsonProvider" />
+    	</jaxrs:providers>
+    </jaxrs:server>
+
+    <bean id="commonsServicesBean" class="es.tekniker.framework.ktek.commons.rest.CommonsMngWSImpl"/>
+    
+    
+     <!--Here we are adding jacksonJsonProvider for JSON parser-->
+	<bean id="jacksonJsonProviderList" class="es.tekniker.framework.ktek.commons.rest.CustomJsonProviderList" />
+		 
+    <jaxrs:server id="CommonsListServices" address="/rest/ktek/commonslist/">
+        <jaxrs:serviceBeans>
+            <ref bean="commonsListServicesBean"/>
+        </jaxrs:serviceBeans>
+        <jaxrs:extensionMappings>
+            <entry key="xml" value="application/xml" />
+            <entry key="json" value="application/json" />
+        </jaxrs:extensionMappings>
+        <jaxrs:features>
+            <cxf:logging/>
+        </jaxrs:features>
+        <jaxrs:providers>        
+        	<bean class="es.tekniker.framework.ktek.exception.ExceptionHandler"/>
+        	<ref bean="jacksonJsonProvider" />
+    	</jaxrs:providers>
+    </jaxrs:server>
+
+    <bean id="commonsListServicesBean" class="es.tekniker.framework.ktek.commons.rest.CommonsListMngWSImpl"/>
+    
+    
+</beans>
