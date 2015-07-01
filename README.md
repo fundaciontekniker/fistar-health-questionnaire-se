@@ -8,7 +8,7 @@ Check also the FI-STAR Catalogue entry for [Health Questionnaire SE][hqse2]
 
 #Requirements
 * PostgreSQL 9.3
-* Apache Tomcat 7.0.55 or higher
+* Apache Tomcat 7.0.50 or higher
 
 #Software base Installation
 * Install [PostgreSQL 9.3][hqse3]
