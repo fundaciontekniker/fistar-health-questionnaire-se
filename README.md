@@ -74,4 +74,4 @@ Health Questionnaire SE is licensed under Affero General Public License (GPL) ve
 [hqse3]: https://wiki.postgresql.org/wiki/Detailed_installation_guides
 [hqse4]: https://tomcat.apache.org/tomcat-7.0-doc/appdev/installation.html
 
-[hqse5]: http://catalogue.fi-star.eu/sites/default/files/enabler-atttachments/Health%20Questionnaire%20SE%20%20User%20and%20Programmer%20Guide%20Beta.pdf 
+[hqse5]: http://catalogue.fi-star.eu/sites/default/files/enabler-atttachments/Health%20Questionnaire%20SE%20%20User%20and%20Programmer%20Guide%20Beta_12.pdf 
