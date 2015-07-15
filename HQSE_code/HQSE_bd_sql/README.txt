@@ -35,5 +35,11 @@ Steps to do :
 3 - Create the database : execute the files 
 
 1_HQSE_beta_create_roles_tablespaces_database.sql 
-2_HQSE_beta_create_schemas_tables.sql
 
+To execute the file to create roles, tablespaces and database you can do this
+sudo -u postgres psql
+postgres=#\i 1_HQSE_beta_create_roles_tablespaces_database.sql
+
+2_HQSE_beta_create_schemas_tables.sql
+To execute the file to create the database structure you must execute the sql script at database ktek
+sudo -u postgres psql -d ktek -f 2_HQSE_beta_create_schemas_tables.sql
