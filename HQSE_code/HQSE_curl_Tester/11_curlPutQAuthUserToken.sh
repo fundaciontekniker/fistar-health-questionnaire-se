@@ -1,1 +1,1 @@
-curl -X PUT -H "Content-Type: application/json" 127.0.0.1/questionnaire.mng.rest/rest/ktek/questionnaire/authorisation/usertoken/ -d '{ "KtekUserTokenEntity": { "token": "tokennewuser1", "user": "newuser1", "dataexpiration":1234567891 } }'
+curl -X PUT -H "Content-Type: application/json" 127.0.0.1:8080/questionnaire.mng.rest/rest/ktek/questionnaire/authorisation/usertoken/ -d '{ "KtekUserTokenEntity": { "token": "tokennewuser1", "user": "newuser1", "dataexpiration":1234567891 } }'
